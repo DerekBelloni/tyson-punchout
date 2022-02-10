@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+  <link rel="stylesheet" href="style.css">
+  <title>Tyson Punch Out</title>
+</head>
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="container-fluid">
+  <header>
+    <h1>Tyson Punchout!</h1>
+  </header>
+  <main class="container-fluid">
+    <div class="row">
+
+
+      <div id="fighter-card" class="col-6 boss-card p-5">
+        <img src="https://www.thesun.co.uk/wp-content/uploads/2020/11/b79c248d-2eed-4d41-be15-9652db973266.jpg" alt=""
+          class="img-fluid tyson-card" onclick="attackTyson()">
+        <div class="progress">
+          <div id="tyson-health" class="progress-bar tyson-bar bg-danger" role="prorgressbar" style="width: 100%">
+          </div>
+        </div>
+      </div>
+      <div class="col-6 trejo-image p-5">
+        <img
+          src="https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2013/07/machete-danny-trejo-image-e1565272203782.jpg?w=2000&ssl=1"
+          alt="" class="img-fluid trejo-image">
+        <div class="progress">
+          <div id="trejo-health" class="progress-bar trejo-bar bg-danger" role="progressbar" style="width: 100%">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h1><span id="fighters-purse"></span> </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-danger" onclick="drawHealth()">Reset Game</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-success" onclick="buyHealth()">Buy Health</button>
+      </div>
+    </div>
+
+
+
+
+  </main>
+  <footer></footer>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
